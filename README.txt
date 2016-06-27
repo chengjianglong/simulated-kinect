@@ -15,5 +15,4 @@
  *
  *-------------------------------------------------------------------------*/
 
-This software named "simulated-kinect" is implemented to visualize the sdf (http://sdformat.org/) format world (created by
-		Gazebo http://gazebosim.org/) in VTK and to take RGBD images.
+This software named "simulated-kinect" is implemented to visualize the sdf (http://sdformat.org/) format world (created by Gazebo http://gazebosim.org/) in VTK and to take RGBD images.
