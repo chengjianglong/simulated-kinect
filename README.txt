@@ -8,7 +8,7 @@
  *
  * Author : Chengjiang Long <chengjiang.long@kitware.com>
  *
- * Description :
+ * Description : Simulated-kinect
  *
  *
  * Created : <2016-06-27>
