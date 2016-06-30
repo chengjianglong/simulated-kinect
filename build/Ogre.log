@@ -1,28 +1,28 @@
-17:02:08: Creating resource group General
-17:02:08: Creating resource group Internal
-17:02:08: Creating resource group Autodetect
-17:02:08: SceneManagerFactory for type 'DefaultSceneManager' registered.
-17:02:08: Registering ResourceManager for type Material
-17:02:08: Registering ResourceManager for type Mesh
-17:02:08: Registering ResourceManager for type Skeleton
-17:02:08: MovableObjectFactory for type 'ParticleSystem' registered.
-17:02:08: ArchiveFactory for archive type FileSystem registered.
-17:02:08: ArchiveFactory for archive type Zip registered.
-17:02:08: ArchiveFactory for archive type EmbeddedZip registered.
-17:02:08: DDS codec registering
-17:02:08: FreeImage version: 3.15.3
-17:02:08: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
-17:02:08: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic
-17:02:08: Registering ResourceManager for type HighLevelGpuProgram
-17:02:08: Registering ResourceManager for type Compositor
-17:02:08: MovableObjectFactory for type 'Entity' registered.
-17:02:08: MovableObjectFactory for type 'Light' registered.
-17:02:08: MovableObjectFactory for type 'BillboardSet' registered.
-17:02:08: MovableObjectFactory for type 'ManualObject' registered.
-17:02:08: MovableObjectFactory for type 'BillboardChain' registered.
-17:02:08: MovableObjectFactory for type 'RibbonTrail' registered.
-17:02:08: OGRE EXCEPTION(6:FileNotFoundException): 'plugins.cfg' file not found! in ConfigFile::load at /home/chengjiang/Softwares/ogre/OgreMain/src/OgreConfigFile.cpp (line 88)
-17:02:08: plugins.cfg not found, automatic plugin loading disabled.
-17:02:08: *-*-* OGRE Initialising
-17:02:08: *-*-* Version 1.10.0unstable (Xalafu)
-17:02:09: Compiler error: invalid parameters in (10): anistropic not supported as first argument (must be "none", "bilinear", "trilinear", or "anisotropic")
+17:06:42: Creating resource group General
+17:06:42: Creating resource group Internal
+17:06:42: Creating resource group Autodetect
+17:06:42: SceneManagerFactory for type 'DefaultSceneManager' registered.
+17:06:42: Registering ResourceManager for type Material
+17:06:42: Registering ResourceManager for type Mesh
+17:06:42: Registering ResourceManager for type Skeleton
+17:06:42: MovableObjectFactory for type 'ParticleSystem' registered.
+17:06:42: ArchiveFactory for archive type FileSystem registered.
+17:06:42: ArchiveFactory for archive type Zip registered.
+17:06:42: ArchiveFactory for archive type EmbeddedZip registered.
+17:06:42: DDS codec registering
+17:06:42: FreeImage version: 3.15.3
+17:06:42: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+17:06:42: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic
+17:06:42: Registering ResourceManager for type HighLevelGpuProgram
+17:06:42: Registering ResourceManager for type Compositor
+17:06:42: MovableObjectFactory for type 'Entity' registered.
+17:06:42: MovableObjectFactory for type 'Light' registered.
+17:06:42: MovableObjectFactory for type 'BillboardSet' registered.
+17:06:42: MovableObjectFactory for type 'ManualObject' registered.
+17:06:42: MovableObjectFactory for type 'BillboardChain' registered.
+17:06:42: MovableObjectFactory for type 'RibbonTrail' registered.
+17:06:42: OGRE EXCEPTION(6:FileNotFoundException): 'plugins.cfg' file not found! in ConfigFile::load at /home/chengjiang/Softwares/ogre/OgreMain/src/OgreConfigFile.cpp (line 88)
+17:06:42: plugins.cfg not found, automatic plugin loading disabled.
+17:06:42: *-*-* OGRE Initialising
+17:06:42: *-*-* Version 1.10.0unstable (Xalafu)
+17:06:42: Compiler error: invalid parameters in (10): anistropic not supported as first argument (must be "none", "bilinear", "trilinear", or "anisotropic")
