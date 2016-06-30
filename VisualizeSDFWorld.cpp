@@ -213,7 +213,7 @@ void AddSdfMaterailToVTKActor(vtkSmartPointer<vtkActor> actor, sdf::ElementPtr m
 //-----------------------------------------------------------------------------------//
 // Add the OGRE material into vtkActor.
 //-----------------------------------------------------------------------------------//
-void AddOgreMaterailToVTKActor(vtkSmartPointer<vtkActor> actor, string mtlname)
+void AddOgreMaterailToVTKActor(vtkSmartPointer<vtkActor> actor, string mtlname, string parentDir)
 {
 	Ogre::MaterialPtr materialPtr = Ogre::MaterialManager::getSingleton().getByName(mtlname);
 
@@ -246,8 +246,9 @@ void AddOgreMaterailToVTKActor(vtkSmartPointer<vtkActor> actor, string mtlname)
 		string textimgname = ptus->getTextureName();
 		if(!CheckFileExist(textimgname.c_str()))
 		{
-			cout << "No such a textrue image. Please take a check. " << endl;
-			exit(0);
+			textimgname = parentDir + ptus->getTextureName();
+			//cout << "No such a textrue image. Please take a check. " << endl;
+			//exit(0);
 		}
 
 		string imgtype = textimgname.substr(textimgname.length()-4);
@@ -632,7 +633,7 @@ int main(int argc, char *argv[])
 						{
 							string mtlname = obj->GetElement("visual")->GetElement("material")->GetElement("script")->GetElement("name")->Get<string>();
 							cout << "mtlname: " << mtlname << endl;
-							AddOgreMaterailToVTKActor(actor, mtlname);
+							AddOgreMaterailToVTKActor(actor, mtlname, parentDir);
 						}
 
 						//renderer->AddActor(actor);
@@ -669,7 +670,7 @@ int main(int argc, char *argv[])
 
 							if(mtlname != "__default__")
 							{
-                                AddOgreMaterailToVTKActor(actor, mtlname);
+                                AddOgreMaterailToVTKActor(actor, mtlname, parentDir);
 							}
 							else
 							{
@@ -763,7 +764,7 @@ int main(int argc, char *argv[])
 
 						if(mtlname != "__default__")
 						{
-                            AddOgreMaterailToVTKActor(actor, mtlname);
+                            AddOgreMaterailToVTKActor(actor, mtlname, parentDir);
 						}
 				
 					}
