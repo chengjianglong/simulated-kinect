@@ -15,7 +15,8 @@
  *
  *-------------------------------------------------------------------------*/
 
-This software named "simulated-kinect" is implemented to visualize the sdf (http://sdformat.org/) format world (created by Gazebo http://gazebosim.org/) in VTK and to take RGBD images.
+This software named "simulated-kinect" is implemented to visualize the sdf (http://sdformat.org/) format 
+world (created by Gazebo http://gazebosim.org/) in VTK and to take RGBD images.
 
 -----------------------
 Prerequisites
@@ -23,6 +24,13 @@ Prerequisites
 1.Install SDFormat according to this page (URL: https://bitbucket.org/osrf/sdformat).
 2.Install OGRE 3D according to this page (URL: https://github.com/ogre3d/clean-project).
 3.VTK 7.0 
+
+
+----------------------
+Coversion tool
+----------------------
+We generate the conversion tool called "collada2obj" to conduct the coversion from *.dae into *.obj and
+*.obj.mtl (See the dirctory "collada2obj" https://github.com/chengjianglong/simulated-kinect/tree/master/collada2obj)
 
 -----------------------
 Before 
