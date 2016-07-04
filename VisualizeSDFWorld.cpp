@@ -495,12 +495,15 @@ int main(int argc, char *argv[])
         cout << "linear:  " << dlinear << endl;
         cout << "quadratic:  " << dquadratic << endl;
 
+		double *pos = lTransform->GetPosition(); 
+
 		vtkSmartPointer<vtkLight> lt = vtkSmartPointer<vtkLight>::New();
+		lt->SetPosition(pos[0], pos[1], pos[2]);
 		lt->SetDiffuseColor(diffuse[0], diffuse[1], diffuse[2]);
 		lt->SetSpecularColor(specular[0], specular[1], specular[2]);
 		lt->SetAttenuationValues(dconstant, dlinear, dquadratic);
-		lt->SetTransformMatrix(lTransform->GetMatrix());
-		lt->SwitchOff();
+		lt->SetFocalPoint(pos[0]+direction[0], pos[1]+direction[1], pos[2]+direction[2]);
+		lt->SwitchOn();
 	    
 		renderer->AddLight(lt);
 
