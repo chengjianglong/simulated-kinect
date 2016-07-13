@@ -388,9 +388,10 @@ vtkSmartPointer<vtkActor> BoundingBoxVTKActor(double *bbox)
 int main(int argc, char *argv[])
 {
 	bool bTakeRGBD = false;
-	if(argc != 3)
+	if(argc != 2)
 	{
-		std::cerr << "Usage: " << argv[0]  << " sdfile bTakeRGBD(0:no, 1:yes)." << std::endl;
+		std::cerr << "Usage: " << argv[0]  << " ../worlds/*.world (* corresponds to any one .world sdformat file)" << std::endl;
+		std::cerr << "Please take a check carefully... " << std::endl << std::endl;
 		return EXIT_FAILURE;
     }
 	
@@ -398,11 +399,6 @@ int main(int argc, char *argv[])
     //const std::string sdfile = "../worlds/beerstable.world";
     //const std::string sdfile = "../worlds/cafebeers.world";
     //const std::string sdfile = "../worlds/realscene.world";
-
-	if(atoi(argv[2]) == 1)
-	{
-		bTakeRGBD = true;
-	}
 
 	string curPath = GetCurrentPath();
 	
@@ -905,59 +901,16 @@ int main(int argc, char *argv[])
 
 
 	vtkSmartPointer<vtkRenderWindow> renderWindow = vtkSmartPointer<vtkRenderWindow>::New();
-    if(bTakeRGBD == true)
-	{
-		renderWindow->SetOffScreenRendering( 1 ); 
-	}
 	renderWindow->AddRenderer(renderer);
-	if(bTakeRGBD == true)
-	{
-		renderWindow->Render();
-	}
-
 
 	//------------------------------------//
-	// Take a RGBD images or only show it.
+	// Interactive visualization.	
 	//------------------------------------//
 	//
-	if(bTakeRGBD == true)
-	{
-		// Save the RGB images.
-		vtkSmartPointer<vtkWindowToImageFilter> windowToImageFilter = vtkSmartPointer<vtkWindowToImageFilter>::New();
-		windowToImageFilter->SetInput(renderWindow);
-		windowToImageFilter->SetMagnification(3); //image quality
-		//windowToImageFilter->Update();
-
-		vtkSmartPointer<vtkPNGWriter> writer = vtkSmartPointer<vtkPNGWriter>::New();
-		writer->SetFileName("rgb_img.png");
-		writer->SetInputConnection(windowToImageFilter->GetOutputPort());
-		writer->Write();
-		
-		windowToImageFilter->SetInputBufferTypeToZBuffer();        //Extract z buffer value
-		//windowToImageFilter->Update();
-
-		// Create Depth Map
-		vtkSmartPointer<vtkImageShiftScale> scale = vtkSmartPointer<vtkImageShiftScale>::New();
-		scale->SetOutputScalarTypeToUnsignedChar();
-		scale->SetInputConnection(windowToImageFilter->GetOutputPort());
-		scale->SetShift(0);
-		scale->SetScale(-255);
-					 
-		// Write depth map as a .bmp image
-		vtkSmartPointer<vtkBMPWriter> imageWriter = vtkSmartPointer<vtkBMPWriter>::New();
-		imageWriter->SetFileName("depth_img.bmp");
-		imageWriter->SetInputConnection(scale->GetOutputPort());
-		imageWriter->Write();
-
-	}
-	else
-	{
-		// Interactive visualization.	
-		vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
-		renderWindowInteractor->SetRenderWindow(renderWindow);
-		
-		renderWindowInteractor->Start();
-	}
+	vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
+	renderWindowInteractor->SetRenderWindow(renderWindow);
+	
+	renderWindowInteractor->Start();
 
 
 

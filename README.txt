@@ -46,15 +46,18 @@ cmake ..
 make
 
 For the beerstable.world, you can run:
-./VisualizeSDFWorld ../worlds/beerstable.world 0  (only visualize the world)
-./VisualizeSDFWorld ../worlds/beerstable.world 1  (take a RGBD image)
+./VisualizeSDFWorld ../worlds/beerstable.world   (only visualize the world)
+./SimulatedKinect ../worlds/beerstable.world   (take a RGBD image)
 
 For the caffebeers.world, you can run:
-./VisualizeSDFWorld ../worlds/caffebeers.world 0  (only visualize the world)
-./VisualizeSDFWorld ../worlds/caffebeers.world 1  (take a RGBD image)
+./VisualizeSDFWorld ../worlds/caffebeers.world   (only visualize the world)
+./SimulatedKinect ../worlds/caffebeers.world   (take a RGBD image)
 
 For the realscene.world, you can run:
-./VisualizeSDFWorld ../worlds/realscene.world 0  (only visualize the world)
-./VisualizeSDFWorld ../worlds/realscene.world 1  (take a RGBD image)
+./VisualizeSDFWorld ../worlds/realscene.world   (only visualize the world)
+./SimulatedKinect ../worlds/realscene.world   (take a RGBD image)
 
+For SimulatedKinect, you can press the 4 key arrows on the keybord to control the moving of the robot. If you want to take a RGBD pictures, just press the ENTER/RETURN key, and then you will get the "capture_rgb.png" and "capture_depth.bmp" immediately.
+
+BTW, we haven't implemented the collission-check part for the moving of the robot in the current version.
 
