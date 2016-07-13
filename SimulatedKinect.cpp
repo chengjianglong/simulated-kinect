@@ -11,7 +11,7 @@
  * Description : Visualize the world created by Gazebo in sdf format with VTK.
  *
  *
- * Created : <2016-06-30>
+ * Created : <2016-07-13>
  *
  *-------------------------------------------------------------------------*/
 
