@@ -58,7 +58,9 @@ For the realscene.world, you can run:
 ./VisualizeSDFWorld ../worlds/realscene.world   (only visualize the world)
 ./SimulatedKinect ../worlds/realscene.world   (take a RGBD image)
 
+For both VisualizeSDFWorld and SimulatedKinect, you can operation the mouse to view the scene via multiple poses.
+
 For SimulatedKinect, you can press the 4 key arrows on the keybord to control the moving of the robot. If you want to take a RGBD pictures, just press the ENTER/RETURN key, and then you will get the "capture_rgb.png" and "capture_depth.bmp" immediately.
 
-BTW, we haven't implemented the collission-check part for the moving of the robot in the current version.
+BTW, we haven't implemented the collision-check part for the moving of the robot in the current version.
 
