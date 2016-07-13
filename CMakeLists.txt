@@ -80,3 +80,6 @@ endif()
 add_executable(VisualizeSDFWorld VisualizeSDFWorld.cpp)
 target_link_libraries(VisualizeSDFWorld ${sdfpath}/src/libsdformat.so.4.1.0 ${IGNITION-MATH_LIBRARIES} ${OGRE_LIBRARIES} ${OIS_LIBRARIES} ${OGRE_Overlay_LIBRARIES} ${VTK_LIBRARIES} ${OGREDEPS_LIBRARY_DIR}/libFreeImage.a)
 
+add_executable(SimulatedKinect SimulatedKinect.cpp)
+target_link_libraries(SimulatedKinect ${sdfpath}/src/libsdformat.so.4.1.0 ${IGNITION-MATH_LIBRARIES} ${OGRE_LIBRARIES} ${OIS_LIBRARIES} ${OGRE_Overlay_LIBRARIES} ${VTK_LIBRARIES} ${OGREDEPS_LIBRARY_DIR}/libFreeImage.a)
+

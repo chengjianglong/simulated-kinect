@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named SimulatedKinect
+
+# Build rule for target.
+SimulatedKinect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SimulatedKinect
+.PHONY : SimulatedKinect
+
+# fast build rule for target.
+SimulatedKinect/fast:
+	$(MAKE) -f CMakeFiles/SimulatedKinect.dir/build.make CMakeFiles/SimulatedKinect.dir/build
+.PHONY : SimulatedKinect/fast
+
+#=============================================================================
 # Target rules for targets named VisualizeSDFWorld
 
 # Build rule for target.
@@ -122,6 +135,33 @@ VisualizeSDFWorld: cmake_check_build_system
 VisualizeSDFWorld/fast:
 	$(MAKE) -f CMakeFiles/VisualizeSDFWorld.dir/build.make CMakeFiles/VisualizeSDFWorld.dir/build
 .PHONY : VisualizeSDFWorld/fast
+
+SimulatedKinect.o: SimulatedKinect.cpp.o
+
+.PHONY : SimulatedKinect.o
+
+# target to build an object file
+SimulatedKinect.cpp.o:
+	$(MAKE) -f CMakeFiles/SimulatedKinect.dir/build.make CMakeFiles/SimulatedKinect.dir/SimulatedKinect.cpp.o
+.PHONY : SimulatedKinect.cpp.o
+
+SimulatedKinect.i: SimulatedKinect.cpp.i
+
+.PHONY : SimulatedKinect.i
+
+# target to preprocess a source file
+SimulatedKinect.cpp.i:
+	$(MAKE) -f CMakeFiles/SimulatedKinect.dir/build.make CMakeFiles/SimulatedKinect.dir/SimulatedKinect.cpp.i
+.PHONY : SimulatedKinect.cpp.i
+
+SimulatedKinect.s: SimulatedKinect.cpp.s
+
+.PHONY : SimulatedKinect.s
+
+# target to generate assembly for a file
+SimulatedKinect.cpp.s:
+	$(MAKE) -f CMakeFiles/SimulatedKinect.dir/build.make CMakeFiles/SimulatedKinect.dir/SimulatedKinect.cpp.s
+.PHONY : SimulatedKinect.cpp.s
 
 VisualizeSDFWorld.o: VisualizeSDFWorld.cpp.o
 
@@ -158,7 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... SimulatedKinect"
 	@echo "... VisualizeSDFWorld"
+	@echo "... SimulatedKinect.o"
+	@echo "... SimulatedKinect.i"
+	@echo "... SimulatedKinect.s"
 	@echo "... VisualizeSDFWorld.o"
 	@echo "... VisualizeSDFWorld.i"
 	@echo "... VisualizeSDFWorld.s"

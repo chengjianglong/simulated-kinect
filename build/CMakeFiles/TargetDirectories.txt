@@ -1,3 +1,4 @@
 /home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles/edit_cache.dir
 /home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles/rebuild_cache.dir
+/home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles/SimulatedKinect.dir
 /home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles/VisualizeSDFWorld.dir

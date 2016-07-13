@@ -60,13 +60,50 @@ CMAKE_SOURCE_DIR = /home/chengjiang/Projects/Drake/simulated-kinect
 CMAKE_BINARY_DIR = /home/chengjiang/Projects/Drake/simulated-kinect/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/SimulatedKinect.dir
+
+# All Build rule for target.
+CMakeFiles/SimulatedKinect.dir/all:
+	$(MAKE) -f CMakeFiles/SimulatedKinect.dir/build.make CMakeFiles/SimulatedKinect.dir/depend
+	$(MAKE) -f CMakeFiles/SimulatedKinect.dir/build.make CMakeFiles/SimulatedKinect.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles --progress-num=1,2 "Built target SimulatedKinect"
+.PHONY : CMakeFiles/SimulatedKinect.dir/all
+
+# Include target in all.
+all: CMakeFiles/SimulatedKinect.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SimulatedKinect.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SimulatedKinect.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles 0
+.PHONY : CMakeFiles/SimulatedKinect.dir/rule
+
+# Convenience name for target.
+SimulatedKinect: CMakeFiles/SimulatedKinect.dir/rule
+
+.PHONY : SimulatedKinect
+
+# clean rule for target.
+CMakeFiles/SimulatedKinect.dir/clean:
+	$(MAKE) -f CMakeFiles/SimulatedKinect.dir/build.make CMakeFiles/SimulatedKinect.dir/clean
+.PHONY : CMakeFiles/SimulatedKinect.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/SimulatedKinect.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/VisualizeSDFWorld.dir
 
 # All Build rule for target.
 CMakeFiles/VisualizeSDFWorld.dir/all:
 	$(MAKE) -f CMakeFiles/VisualizeSDFWorld.dir/build.make CMakeFiles/VisualizeSDFWorld.dir/depend
 	$(MAKE) -f CMakeFiles/VisualizeSDFWorld.dir/build.make CMakeFiles/VisualizeSDFWorld.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles --progress-num=1,2 "Built target VisualizeSDFWorld"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chengjiang/Projects/Drake/simulated-kinect/build/CMakeFiles --progress-num=3,4 "Built target VisualizeSDFWorld"
 .PHONY : CMakeFiles/VisualizeSDFWorld.dir/all
 
 # Include target in all.
